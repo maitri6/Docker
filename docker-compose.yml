@@ -1,0 +1,36 @@
+version: '3'
+services:
+
+
+   #MongoDB services
+
+   mongo_db:
+      container_name: db_container
+      image: mongo:latest
+      restart: always
+      volumes:
+         - mongo_db:/data/db
+
+
+
+   # Node API service
+
+
+   api:
+      build: .
+      ports: 
+         - 5556:5556
+      environment:
+         PORT: 5556
+         MONGODB_URI: mongodb://mongo_db:27017
+         DB_NAME : node
+      depends_on:
+         - mongo_db
+
+volumes:
+   mongo_db: {}
+      
+      
+
+     
+   

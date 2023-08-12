@@ -13,10 +13,6 @@ RUN npm install
 
 
 
-
-
-
-
 COPY . .
 
 EXPOSE 3003

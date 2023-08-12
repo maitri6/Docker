@@ -13,7 +13,7 @@ RUN npm install
 
 
 
-#RUN npm rebuild bcrypt 
+
 
 
 

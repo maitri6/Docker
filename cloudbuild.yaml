@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/qwiklabs-gcp-01-445fa96c0457/nodejs:v2', '/doctor-patient-backend']
+    args: ['build', '-t', 'gcr.io/qwiklabs-gcp-01-445fa96c0457/nodejs:v2', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/qwiklabs-gcp-01-445fa96c0457/nodejs:v2']
 

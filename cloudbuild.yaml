@@ -2,7 +2,9 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/qwiklabs-gcp-01-445fa96c0457/nodejs:v2', './doctor-patient-backend']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/qwiklabs-gcp-01-445fa96c0457/nodejs:v2']
+    args: ['tag', 'gcr.io/qwiklabs-gcp-01-445fa96c0457/nodejs:v2', 'gcr.io/qwiklabs-gcp-01-445fa96c0457/nodejs-image/node:v1']  
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/qwiklabs-gcp-01-445fa96c0457/nodejs-image/node:v1']
 
 images:
-  - 'gcr.io/qwiklabs-gcp-01-445fa96c0457/nodejs:v2'
+  - 'gcr.io/qwiklabs-gcp-01-445fa96c0457/nodejs-image/node:v1'

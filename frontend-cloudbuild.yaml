@@ -1,0 +1,10 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/qwiklabs-gcp-04-d2a5d3ba34ce/angular:v1', './doctor-patient-frontend']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['tag', 'us-central1-docker.pkg.dev/qwiklabs-gcp-04-d2a5d3ba34ce/angular:v1', 'us-central1-docker.pkg.dev/qwiklabs-gcp-04-d2a5d3ba34ce/my-repository/angular:v1']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/qwiklabs-gcp-04-d2a5d3ba34ce/my-repository/angular:v1']
+
+images:
+  - 'us-central1-docker.pkg.dev/qwiklabs-gcp-04-d2a5d3ba34ce/my-repository/angular:v1'

@@ -4,7 +4,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['tag', 'us-central1-docker.pkg.dev/qwiklabs-gcp-04-d2a5d3ba34ce/nodejs:v1', 'us-central1-docker.pkg.dev/qwiklabs-gcp-04-d2a5d3ba34ce/my-repository/node:v1']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-central1-docker.pkg.dev/qwiklabs-gcp-04-d2a5d3ba34ce7/my-repository/node:v1']
+    args: ['push', 'us-central1-docker.pkg.dev/qwiklabs-gcp-04-d2a5d3ba34ce/my-repository/node:v1']
 
 images:
   - 'us-central1-docker.pkg.dev/qwiklabs-gcp-04-d2a5d3ba34ce/my-repository/node:v1'
